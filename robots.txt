@@ -1,0 +1,10 @@
+# robots.txt pour stephencabrol.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stephencabrol.fr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10

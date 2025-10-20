@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Stephen Cabrol, développeur web freelance spécialisé en HTML, CSS et JavaScript. Création de sites web modernes, performants et optimisés SEO. Basé à Paris."
+    />
+    <meta
+      name="keywords"
+      content="développeur web, freelance, HTML, CSS, JavaScript, React, Paris, sites web, landing page, développeur junior"
+    />
+    <meta name="author" content="Stephen Cabrol" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://stephencabrol.fr" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stephencabrol.fr" />
+    <meta
+      property="og:title"
+      content="Stephen Cabrol - Développeur Web Freelance | Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Développeur web junior passionné. Je transforme vos idées en expériences web performantes. HTML, CSS, JavaScript, React."
+    />
+    <meta
+      property="og:image"
+      content="https://stephencabrol.fr/images/og-image.jpg"
+    />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://stephencabrol.fr" />
+    <meta
+      name="twitter:title"
+      content="Stephen Cabrol - Développeur Web Freelance"
+    />
+    <meta
+      name="twitter:description"
+      content="Développeur web junior passionné. Je transforme vos idées en expériences web performantes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://stephencabrol.fr/images/og-image.jpg"
+    />
+
+    <title>Stephen Cabrol - Développeur Web Freelance | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+  <body>
+    <!-- ========== HEADER / NAVIGATION ========== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="logo"> SC WebCODE<span>.</span> </a>
+
+        <ul class="nav-links">
+          <li><a href="#accueil" class="active">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-content fade-in">
+          <span class="badge">👋 Développeur Web Freelance</span>
+          <h1>
+            Je transforme vos idées en<br />
+            <span class="gradient-text">expériences web perfomantes</span>
+          </h1>
+          <p>
+            Spécialisé en développement front-end moderne. De l'idée au
+            déploiement, je crée des sites qui convertissent.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projets" class="btn btn-primary"> Voir mes projets </a>
+            <a href="#contact" class="btn btn-secondary"> Me contacter </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section-title">Ce que je propose</h2>
+        <p class="section-subtitle">
+          Des solutions web sur mesure, modernes et optimisées pour vos
+          objectifs
+        </p>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card scroll-reveal">
+            <div class="service-icon">🎨</div>
+            <h3>Sites Vitrines</h3>
+            <p>
+              Un site élégant et rapide pour présenter votre activité et attirer
+              vos clients. Design moderne et responsive.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card scroll-reveal">
+            <div class="service-icon">⚡</div>
+            <h3>Applications Web</h3>
+            <p>
+              Des solutions interactives et modernes avec JavaScript. Interfaces
+              dynamiques et expérience utilisateur optimale.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card scroll-reveal">
+            <div class="service-icon">🚀</div>
+            <h3>Optimisation & SEO</h3>
+            <p>
+              Améliorez vos performances, votre visibilité et votre
+              référencement Google. Sites rapides et bien positionnés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJETS SECTION ========== -->
+    <section class="projets section" id="projets">
+      <div class="container-wide">
+        <h2 class="section-title">Projets Sélectionnés</h2>
+        <p class="section-subtitle">
+          Des réalisations concrètes qui démontrent mon expertise
+        </p>
+
+        <div class="projets-grid">
+          <!-- PROJET 1 : EliteFoot -->
+          <article class="projet-card featured scroll-reveal">
+            <div class="projet-image">
+              <img
+                src="images/elitefoot-preview.jpg"
+                alt="EliteFoot E-commerce"
+                loading="lazy"
+              />
+              <div class="projet-overlay">
+                <a
+                  href="https://goku944.github.io/elitefoot/"
+                  target="_blank"
+                  class="btn btn-primary"
+                >
+                  Voir le site →
+                </a>
+                <a
+                  href="https://github.com/Goku944/elitefoot"
+                  target="_blank"
+                  class="btn btn-secondary"
+                >
+                  Code source
+                </a>
+              </div>
+            </div>
+
+            <div class="projet-content">
+              <div class="projet-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">E-commerce</span>
+                <span class="tag">LocalStorage</span>
+                <span class="tag">Responsive</span>
+              </div>
+
+              <h3>EliteFoot - E-commerce Maillots</h3>
+
+              <p>
+                Boutique en ligne complète avec panier fonctionnel,
+                personnalisation de produits (flocage), filtres avancés et
+                gestion du stock en JavaScript vanilla.
+              </p>
+
+              <ul class="projet-features">
+                <li>✅ Panier dynamique avec localStorage</li>
+                <li>✅ Système de personnalisation produit</li>
+                <li>✅ Filtres et tri en temps réel</li>
+                <li>✅ Design moderne et responsive</li>
+              </ul>
+
+              <div class="projet-stats">
+                <div class="stat">
+                  <span class="stat-number">500+</span>
+                  <span class="stat-label">lignes de JS</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Responsive</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">0</span>
+                  <span class="stat-label">Frameworks</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJET 2 : Café Landing Page -->
+          <article class="projet-card scroll-reveal">
+            <div class="projet-image">
+              <img
+                src="images/cafe-project.png"
+                alt="Landing Page Café"
+                loading="lazy"
+              />
+              <div class="projet-overlay">
+                <a
+                  href="https://goku944.github.io/cafe-landing/"
+                  target="_blank"
+                  class="btn btn-primary"
+                >
+                  Voir le site →
+                </a>
+                <a
+                  href="https://github.com/Goku944/cafe-landing"
+                  target="_blank"
+                  class="btn btn-secondary"
+                >
+                  Code source
+                </a>
+              </div>
+            </div>
+
+            <div class="projet-content">
+              <div class="projet-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Animations</span>
+              </div>
+
+              <h3>Café Artisanal - Landing Page</h3>
+
+              <p>
+                Landing page moderne pour un café artisanal avec menu hamburger,
+                formulaire de contact fonctionnel et animations JavaScript
+                fluides.
+              </p>
+
+              <ul class="projet-features">
+                <li>✅ Design élégant et moderne</li>
+                <li>✅ Menu navigation responsive</li>
+                <li>✅ Formulaire de contact validé</li>
+                <li>✅ Animations au scroll</li>
+              </ul>
+
+              <div class="projet-stats">
+                <div class="stat">
+                  <span class="stat-number">1</span>
+                  <span class="stat-label">Page optimisée</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Mobile-first</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">95</span>
+                  <span class="stat-label">Lighthouse</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Message pour projets à venir -->
+          <div
+            class="projet-card scroll-reveal"
+            style="
+              grid-column: 1 / -1;
+              background: linear-gradient(
+                135deg,
+                var(--primary-light) 0%,
+                var(--secondary) 100%
+              );
+              color: white;
+              text-align: center;
+              padding: var(--space-xl);
+            "
+          >
+            <h3 style="color: white; font-size: 2rem">
+              🚀 Plus de projets arrivent bientôt !
+            </h3>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.25rem">
+              Je travaille actuellement sur de nouveaux projets ambitieux :
+              Dashboard Analytics, Application de recherche de films, et bien
+              plus encore...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== À PROPOS SECTION ========== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section-title">Mon Parcours</h2>
+        <p class="section-subtitle">
+          De l'industrie au code, une reconversion motivée par la passion
+        </p>
+
+        <div class="about-grid">
+          <!-- Partie gauche : Image -->
+          <div class="about-left">
+            <div class="about-image-wrapper">
+              <div class="about-image-bg"></div>
+              <div class="about-image-placeholder">
+                <span style="font-size: 5rem">👨‍💻</span>
+              </div>
+            </div>
+
+            <div class="quick-facts">
+              <div class="fact">
+                <span class="fact-icon">📍</span>
+                <span>Paris, France</span>
+              </div>
+              <div class="fact">
+                <span class="fact-icon">💼</span>
+                <span>28 ans</span>
+              </div>
+              <div class="fact">
+                <span class="fact-icon">🚀</span>
+                <span>Disponible</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partie droite : Contenu -->
+          <div class="about-right">
+            <span class="label">Mon histoire</span>
+            <h3>De l'ascenseur au code</h3>
+
+            <p class="about-intro">
+              Après 7 ans en tant que cadre dans l'industrie de l'ascenseur,
+              j'ai décidé de me reconvertir dans ma véritable passion : le
+              développement web.
+            </p>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2017-2024</span>
+                  <h4>Cadre Industrie</h4>
+                  <p>
+                    Pilotage de comptes stratégiques, gestion de projets,
+                    rigueur et organisation
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2024</span>
+                  <h4>Reconversion</h4>
+                  <p>
+                    Formation intensive autodidacte en développement web moderne
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2025</span>
+                  <h4>Développeur Web</h4>
+                  <p>
+                    Création de sites performants et modernes pour clients
+                    exigeants
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="about-quote">
+              "J'ai échangé les ascenseurs contre le code. <br />Même objectif :
+              élever les projets et les personnes."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMPÉTENCES SECTION ========== -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Stack Technique</h2>
+        <p class="section-subtitle">
+          Technologies et outils que je maîtrise pour créer des expériences web
+          modernes
+        </p>
+
+        <div class="skills-grid">
+          <!-- Compétences techniques -->
+          <div class="skills-column">
+            <h3 class="skills-column-title">
+              <span class="skills-icon">💻</span>
+              Front-End
+            </h3>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML/CSS</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React (en cours)</span>
+                <span class="skill-percentage">30%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="30"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outils & Méthodologies -->
+          <div class="skills-column">
+            <h3 class="skills-column-title">
+              <span class="skills-icon">🛠️</span>
+              Outils & Workflow
+            </h3>
+
+            <div class="tools-grid">
+              <div class="tool-item">
+                <div class="tool-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                </div>
+                <span>Git & GitHub</span>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"
+                    />
+                  </svg>
+                </div>
+                <span>VS Code</span>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"
+                    />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <span>Figma</span>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-icon">📦</div>
+                <span>npm</span>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-icon">🌐</div>
+                <span>GitHub Pages</span>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-icon">⚡</div>
+                <span>Live Server</span>
+              </div>
+            </div>
+
+            <div class="skills-highlight">
+              <p>
+                <strong>🎯 En cours d'apprentissage :</strong>
+                React, Node.js, API REST
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== POURQUOI MOI SECTION ========== -->
+    <section class="why-me section" id="why-me">
+      <div class="container">
+        <h2 class="section-title">Pourquoi travailler avec moi ?</h2>
+        <p class="section-subtitle">
+          Les avantages de choisir un développeur junior motivé, rigoureux et
+          transparent
+        </p>
+
+        <div class="advantages-grid">
+          <!-- Avantage 1 -->
+          <div class="advantage-card scroll-reveal">
+            <div class="advantage-icon">✅</div>
+            <h3>Code propre & commenté</h3>
+            <p>
+              Documentation claire, code structuré et maintenable. Votre futur
+              développeur me remerciera.
+            </p>
+          </div>
+
+          <!-- Avantage 2 -->
+          <div class="advantage-card scroll-reveal">
+            <div class="advantage-icon">⚡</div>
+            <h3>Réactivité garantie</h3>
+            <p>
+              Réponse en moins de 24h, suivi régulier du projet. Je suis
+              disponible et investi à 100%.
+            </p>
+          </div>
+
+          <!-- Avantage 3 -->
+          <div class="advantage-card scroll-reveal">
+            <div class="advantage-icon">🎯</div>
+            <h3>Rigueur professionnelle</h3>
+            <p>
+              7 ans d'expérience en gestion de projets industriels.
+              Organisation, deadlines et qualité avant tout.
+            </p>
+          </div>
+
+          <!-- Avantage 4 -->
+          <div class="advantage-card scroll-reveal">
+            <div class="advantage-icon">💪</div>
+            <h3>Motivation & passion</h3>
+            <p>
+              En reconversion par choix, pas par hasard. Je construis ma
+              réputation projet après projet.
+            </p>
+          </div>
+
+          <!-- Avantage 5 -->
+          <div class="advantage-card scroll-reveal">
+            <div class="advantage-icon">💰</div>
+            <h3>Tarifs compétitifs</h3>
+            <p>
+              Prix junior pour qualité professionnelle. Je privilégie la qualité
+              à la quantité.
+            </p>
+          </div>
+
+          <!-- Avantage 6 -->
+          <div class="advantage-card scroll-reveal">
+            <div class="advantage-icon">🚀</div>
+            <h3>Technologies modernes</h3>
+            <p>
+              HTML5, CSS3, JavaScript ES6+, React en cours. Stack à jour et
+              bonnes pratiques 2025.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="why-me-cta">
+          <h3>Prêt à démarrer votre projet ?</h3>
+          <p>
+            Première consultation gratuite • Devis détaillé sous 24h • Code
+            source livré sur GitHub
+          </p>
+          <a href="#contact" class="btn btn-primary">
+            Discutons de votre projet 💬
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Démarrons votre projet</h2>
+        <p class="section-subtitle">
+          Une idée ? Un besoin ? Discutons-en simplement et concrètement
+        </p>
+
+        <!-- Contact Card Premium -->
+        <div class="contact-card">
+          <div class="contact-main">
+            <div class="contact-icon">📧</div>
+            <h3>Contactez-moi par email</h3>
+            <p>
+              La méthode la plus rapide et directe pour échanger sur votre
+              projet
+            </p>
+
+            <a
+              href="mailto:dev-web.cabrol@gmail.com"
+              class="btn btn-primary btn-large"
+            >
+              dev-web.cabrol@gmail.com
+            </a>
+          </div>
+
+          <!-- Garanties -->
+          <div class="contact-guarantees">
+            <div class="guarantee-item">
+              <span class="guarantee-icon">⚡</span>
+              <div>
+                <strong>Réponse rapide</strong>
+                <p>Sous 24h maximum</p>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <span class="guarantee-icon">💰</span>
+              <div>
+                <strong>Devis gratuit</strong>
+                <p>Détaillé et sans engagement</p>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <span class="guarantee-icon">✅</span>
+              <div>
+                <strong>Code propre</strong>
+                <p>Documenté et maintenable</p>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <span class="guarantee-icon">🚀</span>
+              <div>
+                <strong>Livraison GitHub</strong>
+                <p>Code source accessible</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info supplémentaire -->
+          <div class="contact-footer">
+            <p>
+              <strong>📍 Basé à Paris</strong> • Disponible pour missions
+              freelance • Intervention possible en région parisienne
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== FOOTER ========== -->
+    <footer
+      style="
+        background: var(--dark);
+        color: white;
+        padding: var(--space-md) 0;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <p style="color: rgba(255, 255, 255, 0.7)">
+          © 2025 Stephen Cabrol - Développeur Web Junior
+        </p>
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: var(--space-xs);
+            font-size: 0.875rem;
+          "
+        >
+          Codé à Paris avec passion 🇫🇷
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script-v2.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stephen Cabrol",
+      "jobTitle": "Développeur Web Freelance",
+      "description": "Développeur web junior spécialisé en HTML, CSS, JavaScript et React",
+      "url": "https://stephencabrol.fr",
+      "email": "dev-web.cabrol@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://github.com/Goku944"
+      ],
+      "knowsAbout": ["HTML5", "CSS3", "JavaScript", "React", "Responsive Design", "Web Development"],
+      "alumniOf": "Reconversion professionnelle",
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
+  </body>
+</html>
