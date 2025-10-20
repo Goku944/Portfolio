@@ -752,8 +752,8 @@ a {
     right: 0;
     background: var(--white);
     flex-direction: column;
-    padding: var(--space-md);
-    box-shadow: var(--shadow-lg);
+    padding: var(--space-lg) var(--space-md);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     gap: 0;
     z-index: 999;
     /* Fix Safari iOS */
@@ -769,7 +769,7 @@ a {
   .nav-links li {
     width: 100%;
     text-align: center;
-    padding: var(--space-sm) 0;
+    padding: 0;
     border-bottom: 1px solid var(--light);
     /* Fix Safari iOS */
     -webkit-tap-highlight-color: transparent;
@@ -781,10 +781,22 @@ a {
 
   .nav-links a {
     display: block;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    padding: var(--space-md) var(--space-sm);
+    font-weight: 500;
     /* Fix Safari iOS */
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--primary);
+    background: var(--light);
   }
 
   .menu-toggle {
@@ -913,14 +925,33 @@ a {
 
   .contact-main {
     padding-bottom: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .contact-main h3 {
     font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
   }
 
   .contact-main p {
     font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-main .btn {
+    margin: 0 auto !important;
+    display: block !important;
+    width: calc(100% - 2rem) !important;
+    max-width: 400px !important;
+    text-align: center !important;
+    left: 0 !important;
+    right: 0 !important;
+    position: relative !important;
   }
 
   .contact-guarantees {
@@ -1576,12 +1607,14 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .contact-icon {
   font-size: 4rem;
   margin-bottom: var(--space-sm);
   animation: bounce 2s ease-in-out infinite;
+  text-align: center;
 }
 
 .contact-main h3 {
@@ -1589,6 +1622,7 @@ a {
   color: var(--dark);
   margin-bottom: var(--space-sm);
   width: 100%;
+  text-align: center;
 }
 
 .contact-main p {
@@ -1596,15 +1630,20 @@ a {
   color: var(--gray);
   margin-bottom: var(--space-md);
   width: 100%;
+  text-align: center;
 }
 
 .contact-main .btn {
   margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .btn-large {
   font-size: 1.25rem;
   padding: 1.25rem 2.5rem;
+  display: inline-block;
+  text-align: center;
 }
 
 /* Garanties grid */
