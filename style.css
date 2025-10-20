@@ -1740,3 +1740,36 @@ footer p + p {
   margin-top: var(--space-xs);
   font-size: 0.875rem;
 }
+/* ========== FIX CENTRAGE BOUTON EMAIL - DÉFINITIF ========== */
+
+.btn-primary,
+.btn-large {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.contact-main .btn-primary,
+.contact-main .btn-large {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .contact-main .btn,
+  .contact-main .btn-large,
+  .contact-main .btn-primary {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: calc(100% - 2rem) !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+}
