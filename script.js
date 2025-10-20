@@ -118,10 +118,13 @@ window.addEventListener("scroll", () => {
 
 // ========== 5. MOBILE MENU TOGGLE ==========
 
-// Menu mobile complet et fonctionnel
+// Menu mobile complet et fonctionnel (compatible Safari iOS)
 if (menuToggle && navLinks) {
-  // Toggle menu au click
-  menuToggle.addEventListener("click", () => {
+  // Fonction pour toggle le menu
+  function toggleMenu(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     navLinks.classList.toggle("active");
     menuToggle.classList.toggle("active");
 
@@ -131,20 +134,35 @@ if (menuToggle && navLinks) {
     } else {
       document.body.style.overflow = "";
     }
-  });
+  }
+
+  // Ajoute les événements click ET touch (pour iOS)
+  menuToggle.addEventListener("click", toggleMenu);
+  menuToggle.addEventListener("touchstart", toggleMenu, { passive: false });
 
   // Ferme le menu au click sur un lien
   const navItems = document.querySelectorAll(".nav-links a");
   navItems.forEach((item) => {
-    item.addEventListener("click", () => {
+    const closeMenu = (e) => {
       navLinks.classList.remove("active");
       menuToggle.classList.remove("active");
       document.body.style.overflow = "";
-    });
+    };
+
+    item.addEventListener("click", closeMenu);
+    item.addEventListener("touchstart", closeMenu);
   });
 
-  // Ferme le menu si on clique en dehors
+  // Ferme le menu si on clique/touche en dehors
   document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove("active");
+      menuToggle.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  document.addEventListener("touchstart", (e) => {
     if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
       navLinks.classList.remove("active");
       menuToggle.classList.remove("active");
