@@ -61,25 +61,34 @@ buttons.forEach((button) => {
 // Scroll fluide vers les sections
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
     const targetId = this.getAttribute("href");
     if (targetId === "#") return; // Ignore les liens vers #
+
+    e.preventDefault();
 
     const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
-      // Hauteur du header fixe
-      const headerHeight = header.offsetHeight;
-      const targetPosition = targetSection.offsetTop - headerHeight;
+      // Ferme le menu mobile AVANT le scroll
+      if (navLinks && navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        if (menuToggle) menuToggle.classList.remove("active");
+        document.body.style.overflow = "";
+      }
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
+      // Attend 300ms que le menu se ferme, puis scroll
+      setTimeout(() => {
+        const headerHeight = header.offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
 
-      // Met à jour la navigation active
-      updateActiveLink(targetId);
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+
+        // Met à jour la navigation active
+        updateActiveLink(targetId);
+      }, 300);
     }
   });
 });
@@ -140,22 +149,13 @@ if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", toggleMenu);
   menuToggle.addEventListener("touchstart", toggleMenu, { passive: false });
 
-  // Ferme le menu au click sur un lien
-  const navItems = document.querySelectorAll(".nav-links a");
-  navItems.forEach((item) => {
-    const closeMenu = (e) => {
-      navLinks.classList.remove("active");
-      menuToggle.classList.remove("active");
-      document.body.style.overflow = "";
-    };
-
-    item.addEventListener("click", closeMenu);
-    item.addEventListener("touchstart", closeMenu);
-  });
-
   // Ferme le menu si on clique/touche en dehors
   document.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    if (
+      navLinks.classList.contains("active") &&
+      !menuToggle.contains(e.target) &&
+      !navLinks.contains(e.target)
+    ) {
       navLinks.classList.remove("active");
       menuToggle.classList.remove("active");
       document.body.style.overflow = "";
@@ -163,7 +163,11 @@ if (menuToggle && navLinks) {
   });
 
   document.addEventListener("touchstart", (e) => {
-    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    if (
+      navLinks.classList.contains("active") &&
+      !menuToggle.contains(e.target) &&
+      !navLinks.contains(e.target)
+    ) {
       navLinks.classList.remove("active");
       menuToggle.classList.remove("active");
       document.body.style.overflow = "";
