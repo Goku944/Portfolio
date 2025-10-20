@@ -118,11 +118,38 @@ window.addEventListener("scroll", () => {
 
 // ========== 5. MOBILE MENU TOGGLE ==========
 
-// Ouvre/ferme le menu mobile (à implémenter si tu veux)
-if (menuToggle) {
+// Menu mobile complet et fonctionnel
+if (menuToggle && navLinks) {
+  // Toggle menu au click
   menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
     menuToggle.classList.toggle("active");
-    navLinks.classList.toggle("mobile-active");
+
+    // Empêche le scroll quand menu ouvert
+    if (navLinks.classList.contains("active")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Ferme le menu au click sur un lien
+  const navItems = document.querySelectorAll(".nav-links a");
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      menuToggle.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Ferme le menu si on clique en dehors
+  document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove("active");
+      menuToggle.classList.remove("active");
+      document.body.style.overflow = "";
+    }
   });
 }
 
